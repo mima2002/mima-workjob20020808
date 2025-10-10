@@ -1,170 +1,196 @@
-<!DOCTYPE html> 
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brandvoxx</title>
-  <link rel="stylesheet" href="css/brandvoxx.css"/>
-  <link rel="stylesheet" href="css/brandvoxx-query.css"/>
-  <link rel="stylesheet" href="css/about.css"/>
-  <link rel="stylesheet" href="css/about-query.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="libary/fontawesome-free-6.7.2-web/css/all.min.css" />
+  <link href="output.css" rel="stylesheet">
+  <title>Portfolio - Awajimima Obisike</title>
 </head>
-<body>
-<header id="header">
-    <nav>
-      <div class="logo">
-        <img src="image/logo8.jpg">
-      </div>
-          <ul class="nav" id="nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="index.html#service">Service</a></li>
-              <li><a href="index.html#pricing">Pricing</a></li>
-              <a class="contact-btn" href="index.html#contact">Contact</a>
-          </ul>
-  
-      <div class="hamburger" id="hamburger" aria-label="Toggle Navigation">
-        <span class="line line1"></span>
-        <span class="line line2"></span>
-        <span class="line line3"></span>
-      </div>
-    </nav>
-</header>
 
-  <div class="about">
-    <div class="about-text scroll-animation">
-      <h1>About Us</h1>
-      <p>We are a leading branding and marketing agency dedicated to helping businesses elevate their brand presence, expand their reach, and amplify their influence. Our team of experts specializes in creating tailored solutions that resonate with your target audience and drive results.</p>
+<body class="bg-white">
+  <!-- Navbar -->
+  <nav class="nav sticky top-0 bg-white shadow-md md:shadow-none z-50">
+    <div class="text-green-600 hidden md:flex text-[14px] justify-center text-center py-4">
+      Get Quick response via contact us on WhatsApp
+      <img class="mx-2.5" src="images/black-whatsapp.png" />
+      <span class="font-bold">+2348056879505</span>
+    </div>
+
+    <div class="lg:px-[100px] px-[16px] sm:px-7 xl:px-[120px]">
+      <div class="flex justify-between h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <a href="index.html" class="text-xl font-thin text-green-600">
+            <img class="w-[63px] h-[16px] md:w-[113px] md:h-[26px]" src="images/logo.png" alt="Logo">
+          </a>
+        </div>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="text-[14px] text-gray-700 hover:text-green-600">Home</a>
+          <a href="work.html" class="text-[14px] text-gray-700 hover:text-green-600">Work</a>
+          <a href="about.html" class="text-[14px] text-gray-700 hover:text-green-600">About</a>
+          <a href="contact.html" class="text-center bg-green-500 rounded-[10px] text-[14px] py-3 px-7 font-bold text-zinc-50 hover:border-2 hover:border-green-300 transition-all duration-400 hover:bg-green-900">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <div id="menu-btn" class="flex flex-col justify-center w-8 h-8 cursor-pointer space-y-1" role="button" tabindex="0" aria-label="Toggle menu">
+            <span class="block w-6 h-0.5 bg-gray-700 transition-all duration-500"></span>
+            <span class="block w-4 h-0.5 bg-gray-700 transition-all duration-500"></span>
+            <span class="block w-6 h-0.5 bg-gray-700 transition-all duration-500"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-green-50 shadow-lg md:hidden max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+      <a href="index.html" class="block py-3 px-4 text-gray-700 hover:text-green-600">Home</a>
+      <a href="work.html" class="block py-3 px-4 text-gray-700 hover:text-green-600">Work</a>
+      <a href="about.html" class="block py-3 px-4 text-gray-700 hover:text-green-600">About</a>
+      <a href="contact.html" class="block py-3 px-4 text-gray-700 hover:text-green-600">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="md:justify-center md:gap-[100px] xl:gap-[197px] lg:gap-[167px] md:text-left md:flex-row-reverse px-[16px] md:px-[30px] lg:px-[100px] xl:px-[120px] gap-5 py-13.5 flex sm:items-center text-center flex-col">
+    <div class="flex justify-center relative">
+      <div class="bg-green-500 w-[239px] h-[229px] md:h-[139px] md:w-[139px] xl:h-[411px] xl:w-[400px] absolute rounded-full border border-green-500 animate-spin-slow"></div>
+      <img class="relative z-10 h-[229px] w-[229px] max-w-[229px] md:max-w-[329px] lg:max-w-[389px] md:h-[309px] md:w-[400px] lg:h-[330px] lg:w-[480px] xl:h-[400px] xl:w-[750px] rounded-full"
+           src="images/about-main1.jpg" alt="Hero Image">
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-1">
+        <h2 class="md:text-[20px] text-[17px] text-green-600 font-semibold">Welcome, I'm</h2>
+        <h1 class="md:text-[45px] lg:text-[60px] text-[32px] leading-9 md:leading-16 lg:leading-18 font-bold">
+          Awajimima Obisike
+        </h1>
+      </div>
+      <div class="flex-col text-center gap-0 md:text-left">
+        <h2 id="typingText1" class="text-[19px] lg:text-[24px] text-green-700 font-regular"></h2>
+        <h1 id="typingText2" class="text-[15px] lg:text-[17px] text-gray-500 font-regular"></h1>
+      </div>
+      <div class="flex gap-2 justify-center md:justify-start">
+        <a href="contact.html" class="cursor-pointer text-center w-[108px] bg-green-500 rounded-[10px] transition-all duration-300 text-[15px] py-3 px-3.5 font-medium text-zinc-50 hover:border-2 hover:border-green-300 hover:bg-green-900">Hire me</a>
+        <span class="font-medium content-center">download</span>
+        <div class="flex items-baseline-last hover:items-center">
+          <a href="images/2caseStudy7.png" download="Owen-Resume.pdf"><img class="h-[36px] w-[38px] hover:h-[40px] hover:w-[38px] transition-all duration-400" src="images/home-download_icon.png" alt="Download Icon"></a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <section class="mv-container">
-    <div class="mission scroll-animation">
-      <img src="image/about-mission-img.png" alt="">
-      <div class="mission-text">
-        <h1>Our Mission</h1>
-        <p>To empower brands, movements, and leaders with bold, human-centered storytelling and strategic digital communication that amplifies visibility, ignites engagement, and drives measurable impact.</p>
-      </div>
-    </div>
-    <div class="vision scroll-animation">
-      <img src="image/about-mission-img.png" alt="">
-      <div class="vision-text">
-        <h1>Our Vision</h1>
-        <p>To become Africa’s leading creative force for digital influence — shaping iconic brands, transforming narratives, and elevating purpose-driven organizations to global relevance.</p>
+  <!-- Services Section -->
+  <section class="bg-green-50 py-12 lg:py-28">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="scroll-animation text-[28px] md:text-[30px] lg:text-[38px] xl:text-[40px] font-bold text-center mb-12">
+        Our <span class="text-green-600">Service</span>
+      </h2>
+      <div class="scroll-animation grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 px-[16px] md:px-[30px] lg:px-[100px] xl:px-[120px] gap-8">
+        <div class="relative shadow-lg group box w-full h-[200px] md:h-[220px] bg-white rounded-md cursor-pointer flex flex-col justify-center text-black overflow-hidden">
+          <div class="text-4xl text-green-500 mb-4 mx-3 mt-6 z-10"><i class="fa-brands fa-figma text-green-600 text-4xl ml-3 z-10"></i></div>
+          <h3 class="mx-6 text-xl font-semibold mb-2 text-black">UI/UX</h3>
+          <p class="mx-6 text-gray-600 mb-6">We create beautiful, fast, and user-friendly mobile applications for iOS and Android platforms.</p>
+        </div>
+
+        <div class="scroll-animation relative shadow-lg group box w-full h-[200px] md:h-[220px] bg-white rounded-md cursor-pointer flex flex-col justify-center text-black overflow-hidden">
+          <div class="text-4xl text-green-500 mb-4 mx-3 mt-6 z-10"><i class="fas fa-code ml-3 z-10 text-green-600 text-4xl"></i></div>
+          <h3 class="mx-6 text-xl font-semibold mb-2 text-black">Front-end Development</h3>
+          <p class="mx-6 text-gray-600 mb-6">We build responsive, high-performing web interfaces.</p>
+        </div>
+
+        <div class="scroll-animation relative shadow-lg group box w-full h-[200px] md:h-[220px] bg-white rounded-md cursor-pointer flex flex-col justify-center text-black overflow-hidden">
+          <div class="text-4xl text-green-500 mb-4 mx-3 mt-6 z-10"><i class="fas fa-signature text-green-600 text-4xl ml-3 z-10"></i></div>
+          <h3 class="mx-6 text-xl font-semibold mb-2 text-black">Branding</h3>
+          <p class="mx-6 text-gray-600 mb-6">We design impactful visual identities that tell your story.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="slider-section scroll-animation">
-    <div class="slider-container">
-      <h1>Trusted By <span>Leading</span> Brands</h1>
-      <p>We're honored to have collaborated with some of the world's most innovative brands</p>
-      <div class="slider-content">
-        <img src="image/agropaddy.png">
-        <img src="image/gear7.png">
-        <img src="image/techpass (1).png">
-        <img src="image/techtan (1).jpg">
-        <img src="image/techup-ph.jpg">
-        <img src="image/ticare1 3.png">
-        <img src="image/techpass (1).png">
-        <img src="image/techtan (1).jpg">
-        <img src="image/techup-ph.jpg">
-        <img src="image/ticare1 3.png">
+  <!-- Case Study -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-[30px] md:text-[38px] lg:text-[40px] font-bold mb-6">
+        Case <span class="text-green-600">Studies</span>
+      </h2>
+      <p class="text-gray-600 mb-12">A few of our favorite projects showcasing our creativity and skill.</p>
+
+      <div class="grid md:grid-cols-3 gap-8 px-6 md:px-12">
+        <img src="images/casestudy1.png" alt="Case Study 1" class="rounded-xl shadow-md hover:scale-105 transition">
+        <img src="images/casestudy2.png" alt="Case Study 2" class="rounded-xl shadow-md hover:scale-105 transition">
+        <img src="images/casestudy3.png" alt="Case Study 3" class="rounded-xl shadow-md hover:scale-105 transition">
       </div>
     </div>
   </section>
 
-  <section class="value">
-    <h2 class="section-title">Key <span>Service</span></h2>
-    <div class="value-container">
-      <div class="value-card scroll-animation">
-        <div class="icon">B</div>
-        <h3>Boldness</h3>
-        <p>We take fearless creative leaps and challenge conventional boundaries to make your brand unforgettable.</p>
-      </div>
-      <div class="value-card scroll-animation">
-        <div class="icon">R</div>
-        <h3>Reliability</h3>
-        <p>We deliver consistently, with excellence and integrity, building trust with every project and partnership.</p>
-      </div>
-      <div class="value-card scroll-animation">
-        <div class="icon">A</div>
-        <h3>Authenticity</h3>
-        <p>We communicate real stories and develop genuine brand identities that resonate deeply with audiences.</p>
-      </div>
-      <div class="value-card scroll-animation">
-        <div class="icon">N</div>
-        <h3>Nimbleness</h3>
-        <p>We are agile and adaptive, ready to pivot with market trends and client needs for optimal results.</p>
-      </div>
-      <div class="value-card scroll-animation">
-        <div class="icon">G</div>
-        <h3>Data-Driven</h3>
-        <p>Our strategies are backed by insights and analytics to ensure measurable growth and smart decision-making.</p>
-      </div>
-      <div class="value-card scroll-animation">
-        <div class="icon">V</div>
-        <h3>Vision-Centered</h3>
-        <p>We stay focused on long-term brand impact, crafting solutions that align with your mission and future.</p>
-      </div>
-      <div class="value-card scroll-animation">
-        <div class="icon">O</div>
-        <h3>Originality</h3>
-        <p>Creativity is our heartbeat. We bring fresh ideas that distinguish your brand from the noise.</p>
-      </div>
-      <div class="value-card scroll-animation">
-        <div class="icon">X</div>
-        <h3>eXcellence</h3>
-        <p>Our strategies are backed by insights and analytics to ensure measurable growth and smart decision-making.</p>
-      </div>
-      <div class="value-card scroll-animation">
-        <div class="icon">X</div>
-        <h3>eXperience</h3>
-        <p>We prioritize user and client experience, making every interaction smooth, impactful, and memorable.</p>
+  <!-- About -->
+  <section class="bg-green-50 py-20">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6 gap-10">
+      <img src="images/about-main1.jpg" alt="About Image" class="rounded-xl shadow-md md:w-1/2">
+      <div class="md:w-1/2">
+        <h2 class="text-[30px] md:text-[38px] font-bold mb-4">About <span class="text-green-600">Me</span></h2>
+        <p class="text-gray-600 leading-7 mb-4">
+          I’m Awajimima Obisike, a front-end developer and designer passionate about crafting modern, responsive, and user-centered web experiences.
+        </p>
+        <p class="text-gray-600 leading-7">
+          From idea to execution, I bring design and code together to help brands connect with their audience and grow online.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="footer-pack">
-    <div class="footer">
-      <ul>
-        <li><img class="footer-img scroll-animation" src="image/logo8.jpg" alt="Smiling Woman"></li>
-        <li><p>Expert branding & marketing<br> solutions to elevate your<br> brand's voice, expand your <br>reach, and amplify your influence.</p></li>
-      </ul>
-      <ul>
-        <li><a href="brandvoxx.html#company" class="link-title">Company</a></li>
-        <li><a href="about.html" class="link">About Us</a></li>
-        <li><a href="index.html" class="link">Home</a></li>
-        <li><a href="index.html#service" class="link">Service</a></li>
-        <li><a href="index.html#pricing" class="link">Pricing</a></li>
-      </ul>
-      <ul>
-        <li><a href="index.html#service" class="link-title">Service</a></li>
-        <li><a href="index.html#branding" class="link">Branding</a></li>
-        <li><a href="index.html#digital-marketing" class="link">Digital Marketing</a></li>
-        <li><a href="index.html#content-creation" class="link">Content creation & Marketing</a></li>
-        <li><a href="index.html#political-influence" class="link">Political Influence</a></li>
-        <li><a href="index.html#website-seo" class="link">Website & SEO</a></li>
-        <li><a href="index.html#custom-service" class="link">Custom Service</a></li>
-      </ul>
-      <ul>
-        <li><a href="index.html#contact" class="link-title">Contact</a></li>
-        <li><a href="index.html#phone" class="link">+234 8056879505</a></li>
-        <li><a href="index.html#email" class="link">Brandvoxx@gmail.com</a></li>
-      </ul>
-    </div>
-    <div class="copyright">
-      <h5>Copyright - Brandvoxx</h5> 
-      <div class="footericon">
-        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+  <!-- Testimonials -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto text-center px-6">
+      <h2 class="text-[30px] md:text-[38px] font-bold mb-10">Client <span class="text-green-600">Testimonials</span></h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-white shadow-lg p-8 rounded-xl">
+          <p class="text-gray-600 mb-4">"Working with Awajimima was an amazing experience. The design was top-notch and delivered right on time!"</p>
+          <h4 class="font-bold text-green-700">— Chinedu Okafor</h4>
+        </div>
+        <div class="bg-white shadow-lg p-8 rounded-xl">
+          <p class="text-gray-600 mb-4">"The attention to detail and dedication to creating quality work blew me away. Highly recommended!"</p>
+          <h4 class="font-bold text-green-700">— Amara Ibe</h4>
+        </div>
       </div>
     </div>
   </section>
 
-  <script type="module" src="javascript/havoxx.js"></script>
-  <script type="module" src="javascript/about.js"></script>
+  <!-- FAQ -->
+  <section class="bg-green-50 py-20">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-[30px] md:text-[38px] font-bold mb-10">Frequently Asked <span class="text-green-600">Questions</span></h2>
+      <div class="text-left space-y-4">
+        <details class="bg-white shadow rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">What services do you offer?</summary>
+          <p class="mt-2 text-gray-600">I offer front-end development, UI/UX design, and branding services tailored to each client’s needs.</p>
+        </details>
+        <details class="bg-white shadow rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">Do you work with startups?</summary>
+          <p class="mt-2 text-gray-600">Absolutely! I enjoy helping startups create strong online identities and products that stand out.</p>
+        </details>
+        <details class="bg-white shadow rounded-lg p-4">
+          <summary class="font-semibold cursor-pointer">How can I contact you?</summary>
+          <p class="mt-2 text-gray-600">You can reach me through the contact page or WhatsApp at +2348056879505.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white py-10 text-center">
+    <p>&copy; 2025 Awajimima Obisike. All rights reserved.</p>
+    <div class="flex justify-center gap-6 mt-4 text-lg">
+      <a href="#" class="hover:text-green-300"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hover:text-green-300"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="hover:text-green-300"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

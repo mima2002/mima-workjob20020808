@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assest/libary/fontawesome-free-6.7.2-web/css/all.min.css" />
+  <link href="./output.css" rel="stylesheet">
+  <title>Portfolio</title>
+</head>
+<body class="bg-white">
+
+<!-- Navbar -->
+<nav class="nav sticky top-0 shadow-md md:shadow-none relative z-50">
+  <div class="text-green-600 hidden md:flex text-[14px] justify-center text-center py-4">
+    Get Quick response via contact us on WhatsApp
+    <img class="mx-2.5" src="/assest/images/black-whatsapp.png" />
+    <span class="font-bold">+2348056879505</span>
+  </div>
+  <div class="lg:px-[100px] px-[16px] sm:px-7 xl:px-[120px]">
+    <div class="flex justify-between h-16">
+      <!---LOGO-->
+      <div class="flex-shrink-0 flex items-center">
+        <a href="index.html" class="text-xl font-thin text-green-600">
+          <img class="w-[63px] h-[16px] md:w-[113px] md:h-[26px]" src="/assest/images/logo.png" alt="Logo">
+        </a>
+      </div>
+      <!--- Desktop Nav -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-[14px] text-gray-700 hover:text-green-600">Home</a>
+        <a href="/src/work.html" class="text-[14px] text-gray-700 hover:text-green-600">Work</a>
+        <a href="/src/about.html" class="text-[14px] text-gray-700 hover:text-green-600">About</a>
+        <a href="/src/contact.html" class="text-center bg-green-500 rounded-[10px] text-[14px] py-3 px-7 font-bold text-zinc-50 hover:border-2 hover:border-green-300 transition-all duration-400 hover:bg-green-900">Contact</a>
+      </div>
+      <!--- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <div id="menu-btn" class="flex flex-col justify-center w-8 h-8 cursor-pointer space-y-1" role="button" tabindex="0" aria-label="Toggle menu">
+          <span class="block w-6 h-0.5 bg-gray-700 transition-all duration-500"></span>
+          <span class="block w-4 h-0.5 bg-gray-700 transition-all duration-500"></span>
+          <span class="block w-6 h-0.5 bg-gray-700 transition-all duration-500"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="absolute top-full left-0 w-full bg-green-50 shadow-lg md:hidden max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+    <a href="/index.html" class="block py-3 px-4 text-gray-700 hover:text-green-600">Home</a>
+    <a href="/src/work.html" class="block py-3 px-4 text-gray-700 hover:text-green-600">Work</a>
+    <a href="/src/about.html" class="block py-3 px-4 text-gray-700 hover:text-green-600">About</a>
+    <a href="/src/contact.html" class="block py-3 px-4 text-gray-700 hover:text-green-600">Contact</a>
+  </div>
+</nav>
+
+<!-- Contact Section -->
+<section class="bg-green-50 py-16 lg:py-25 px-[16px] lg:px-[120px]">
+  <div class="mx-auto text-center">
+    <h2 class="text-[28px] md:text-[34px] lg:text-[42px] font-bold mb-4">
+      Get In <span class="text-green-600">Touch</span>
+    </h2>
+    <p class="text-gray-600 mb-10">Have a project in mind or just want to connect? Let’s talk.</p>
+    
+    <!-- Form -->
+    <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+      <div>
+        <input name="name" type="text" placeholder="Your Name" required
+          class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-green-500">
+      </div>
+      <div>
+        <input name="email" type="email" placeholder="Your Email" required
+          class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-green-500">
+      </div>
+      <div class="md:col-span-2">
+        <textarea name="message" rows="5" placeholder="Your Message" required
+          class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:border-green-500"></textarea>
+      </div>
+
+      <!-- Hidden timestamp for template -->
+      <input type="hidden" name="time" value="">
+
+      <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-semibold cursor-pointer py-4 px-6 rounded-xl shadow-md md:col-span-2">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Popup -->
+<div id="popup" class="hidden fixed inset-0 flex items-center justify-center bg-gray-50 z-50">
+  <div id="popupBox" class="flex flex-col gap-1.5 lg:gap-3 justify-center lg:h-full w-full max-h-[360px] lg:max-h-[450px] max-w-[300px] md:max-w-[400px] bg-white p-6 rounded-xl shadow-lg text-center transform scale-90 opacity-0 transition-all duration-300 ease-out">
+    <i class="fas fa-check-circle text-[30px] text-green-500 lg:text-[40px]"></i>
+    <h1 class="text-green-600 mb-2 text-[26px] lg:text-[36px] font-semibold">You're Welcome</h1>
+    <p id="popupMessage" class="text-[14px] lg:text-[18px] font-medium text-green-600">Message sent successfully!</p>
+    <p class="text-gray-400 text-[13px] md:text-[16px]">Thank you for contacting me! I've received your message and appreciate you taking the time to reach out. I'll review your inquiry and get back to you as soon as possible - usually within a few minutes to a day.</p>
+    <button id="closePopup" class="cursor-pointer mt-2 bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-lg">OK</button>
+  </div>
+</div>
+
+<!-- Loading Overlay -->
+<div id="loadingOverlay" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+  <div class="w-12 h-12 border-4 border-white border-t-green-500 rounded-full animate-spin"></div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-green-300 border-t border-gray-200 py-3 lg:py-10 px-6 lg:px-20">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <p class="text-gray-600 text-sm">© 2025 Awajimima Obisike Owen. All Rights Reserved.</p>
+    <div class="flex gap-6">
+      <a href="#" class="text-gray-600 hover:text-green-600 text-lg"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-gray-600 hover:text-green-600 text-lg"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-gray-600 hover:text-green-600 text-lg"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="text-gray-600 hover:text-green-600 text-lg"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="module" src="/assest/javascript/contact.js"></script>
+
+
+</body>
+</html>

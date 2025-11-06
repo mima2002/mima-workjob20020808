@@ -747,6 +747,18 @@
   .gap-y-\[30px\] {
     row-gap: 30px;
   }
+
+  .gap-y-\[50px\] {
+    row-gap: 50px;
+  }
+
+  .gap-y-\[70px\] {
+    row-gap: 70px;
+  }
+
+  .gap-y-\[80px\] {
+    row-gap: 30px;
+  }
   .overflow-hidden {
     overflow: hidden;
   }
